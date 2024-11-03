@@ -40,8 +40,9 @@ form.addEventListener('submit', (e) => {
     // CREATE THE DELETE BUTTON
     let actionCell = newRow.insertCell(5);
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = 'X';
     deleteButton.type = 'click'
+    deleteButton.style.backgroundColor = 'red'
     actionCell.appendChild(deleteButton);
     deleteButton.addEventListener('click', function(e) {
         const row = e.target.closest('tr')
